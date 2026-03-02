@@ -10,7 +10,8 @@
     "ship": "pnpm --filter @jiobase/shared build && pnpm --filter @jiobase/api run deploy && pnpm --filter @jiobase/proxy run deploy && pnpm --filter @jiobase/web run deploy",
     "ship:api": "pnpm --filter @jiobase/shared build && pnpm --filter @jiobase/api run deploy",
     "ship:proxy": "pnpm --filter @jiobase/shared build && pnpm --filter @jiobase/proxy run deploy",
-    "ship:web": "pnpm --filter @jiobase/shared build && pnpm --filter @jiobase/web run deploy"
+    "ship:web": "pnpm --filter @jiobase/shared build && pnpm --filter @jiobase/web run deploy",
+    "ship:cli": "pnpm --filter create-jiobase build && cd packages/cli && npm publish"
   },
   "devDependencies": {
     "turbo": "^2.4.0",

@@ -1,0 +1,49 @@
+{
+  "name": "create-jiobase",
+  "version": "0.1.1",
+  "description": "Deploy a production-quality Supabase proxy on Cloudflare Workers in under 2 minutes",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "bin": {
+    "create-jiobase": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --clean",
+    "dev": "tsup src/index.ts --format esm --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.9.1",
+    "picocolors": "^1.1.1",
+    "cross-spawn": "^7.0.6",
+    "which": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/cross-spawn": "^6.0.6",
+    "@types/which": "^3.0.4",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "supabase",
+    "proxy",
+    "cloudflare",
+    "workers",
+    "dns-block",
+    "jiobase",
+    "india"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunithvs/jiobase.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

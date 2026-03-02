@@ -1,0 +1,16 @@
+/**
+ * Generates a minimal wrangler.toml for the scaffolded project.
+ * No KV bindings, no Analytics Engine — pure standalone proxy.
+ */
+export function generateWranglerToml(workerName: string): string {
+  return `name = "${workerName}"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+
+# No KV or D1 bindings needed — config is hardcoded for single-project use.
+# If you need analytics, uncomment below and create the dataset in the dashboard:
+# [[analytics_engine_datasets]]
+# binding = "ANALYTICS"
+# dataset = "${workerName}-analytics"
+`;
+}
