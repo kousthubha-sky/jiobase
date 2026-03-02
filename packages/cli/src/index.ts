@@ -145,6 +145,9 @@ async function main() {
   );
 
   // --- Deploy ---
+  let finalUrl = `https://${answers.workerName}.<you>.workers.dev`;
+  let successfullyDeployed = false;
+
   if (hasWrangler && isAuthed) {
     const shouldDeploy = await confirmDeploy();
 
@@ -173,16 +176,10 @@ async function main() {
 
         if (deployResult.success) {
           deploySpinner.stop('Deployed successfully!');
+          successfullyDeployed = true;
 
           if (deployResult.url) {
-            console.log();
-            console.log(pc.bold(pc.green('  ✓ Your proxy is live!')));
-            console.log();
-            console.log(pc.bold(`  URL: ${pc.cyan(deployResult.url)}`));
-            console.log();
-            console.log(pc.gray('  Test it:'));
-            console.log(pc.gray(`  curl ${deployResult.url}/__health`));
-            console.log();
+            finalUrl = deployResult.url;
           }
         } else {
           deploySpinner.stop('Deploy failed');
@@ -217,7 +214,7 @@ async function main() {
   console.log(pc.gray('  ') + pc.white(`const supabase = createClient('${answers.supabaseUrl}', 'your-anon-key')`));
   console.log();
   console.log(pc.gray('  ') + pc.green('// After (works everywhere)'));
-  console.log(pc.gray('  ') + pc.white(`const supabase = createClient('https://${answers.workerName}.<you>.workers.dev', 'your-anon-key')`));
+  console.log(pc.gray('  ') + pc.white(`const supabase = createClient('${finalUrl}', 'your-anon-key')`));
   console.log();
 
   clack.log.info(
@@ -228,6 +225,31 @@ async function main() {
   );
 
   clack.outro(pc.green('Done! Your Supabase proxy is ready 🎉'));
+
+  // Show final proxied domain link below all text
+  console.log();
+  console.log(pc.bold(pc.green('  ✓ Final Proxy Domain:')));
+  console.log(pc.bold(`  URL: ${pc.cyan(finalUrl)}`));
+  console.log();
+
+  if (successfullyDeployed) {
+    console.log(pc.bold(pc.yellow('  ⚠️  IMPORTANT:')));
+    console.log(pc.gray(`  Replace your old domain (`) + pc.red(answers.supabaseUrl) + pc.gray(`)`));
+    console.log(pc.gray(`  with your new proxy domain (`) + pc.green(finalUrl) + pc.gray(`)`));
+    console.log(pc.gray(`  in your project's `) + pc.white(`.env`) + pc.gray(` variables.`));
+    console.log();
+
+    console.log(pc.gray('  Test it:'));
+    console.log(pc.gray(`  curl ${finalUrl}/__health`));
+  } else {
+    console.log(pc.bold(pc.yellow('  ⚠️  IMPORTANT:')));
+    console.log(pc.gray(`  Once deployed, remember to replace your old domain (`));
+    console.log(pc.gray(`  `) + pc.red(answers.supabaseUrl) + pc.gray(`) with your new proxy domain (`));
+    console.log(pc.gray(`  `) + pc.green(finalUrl) + pc.gray(`) in your project's `) + pc.white(`.env`) + pc.gray(` variables.`));
+  }
+  console.log();
+  console.log(pc.green(finalUrl));
+  console.log();
 }
 
 main().catch((err) => {
