@@ -10,6 +10,30 @@
 
 	const ALL_BLOGS: BlogEntry[] = [
 		{
+			slug: 'create-jiobase-cli-self-host',
+			title: 'Introducing create-jiobase: Self-Host Your Supabase Proxy in Under 60 Seconds',
+			description: 'A new CLI tool that scaffolds a production-quality Cloudflare Worker proxy and deploys it to your own account.',
+			badge: 'Tutorial',
+			badgeColor: 'brand',
+			readTime: '5 min'
+		},
+		{
+			slug: 'self-host-supabase-proxy-tutorial',
+			title: 'How to Self-Host a Supabase Proxy on Cloudflare Workers (Free)',
+			description: 'Complete walkthrough: from zero to a deployed Supabase reverse proxy on your own Cloudflare account.',
+			badge: 'Tutorial',
+			badgeColor: 'brand',
+			readTime: '8 min'
+		},
+		{
+			slug: 'self-host-vs-managed-supabase-proxy',
+			title: 'Self-Hosted vs Managed Supabase Proxy: Which Should You Choose?',
+			description: 'Two paths to unblocking Supabase in India. Detailed comparison with decision guide.',
+			badge: 'Comparison',
+			badgeColor: 'purple',
+			readTime: '6 min'
+		},
+		{
 			slug: 'supabase-blocked-india-fix',
 			title: 'Supabase Blocked in India: What Happened and How to Fix It',
 			description: 'Indian ISPs are DNS-blocking *.supabase.co. Here is everything you need to know and how to fix it.',

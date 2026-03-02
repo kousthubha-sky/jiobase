@@ -504,7 +504,7 @@
 					<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-brand-400/20 bg-brand-400/5 text-sm font-bold text-brand-400">2</div>
 					<div>
 						<h3 class="text-lg font-semibold text-white">Managed fix: Use JioBase</h3>
-						<p class="text-sm text-gray-500">Fully managed, 2 minutes</p>
+						<p class="text-sm text-gray-500">Fully managed, under 60 seconds</p>
 					</div>
 				</div>
 				<p class="mb-3 text-sm leading-relaxed text-gray-400">

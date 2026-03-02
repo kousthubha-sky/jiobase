@@ -224,7 +224,7 @@
 				Your Supabase app broken in India?
 			</h2>
 			<p class="mt-3 text-gray-400">
-				Fix it in under 2 minutes. Change one URL and deploy.
+				Fix it in under 60 seconds. Change one URL and deploy.
 			</p>
 			<div class="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
 				<a href="/register" class="rounded-xl bg-brand-400 px-8 py-3 text-sm font-semibold text-black transition hover:bg-brand-300">

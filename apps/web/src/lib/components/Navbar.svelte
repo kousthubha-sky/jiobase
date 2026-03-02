@@ -33,7 +33,7 @@
 			<a href="/guides/nextjs" class="text-sm transition {active === 'guides' ? 'font-medium text-brand-400' : 'text-gray-400 hover:text-white'}">Guides</a>
 			<a href="/docs" class="text-sm transition {active === 'docs' ? 'font-medium text-brand-400' : 'text-gray-400 hover:text-white'}">Docs</a>
 			<a href="/blog" class="text-sm transition {active === 'blog' ? 'font-medium text-brand-400' : 'text-gray-400 hover:text-white'}">Blog</a>
-			<a href="/tools/worker-generator" class="text-sm transition {active === 'tools' ? 'font-medium text-brand-400' : 'text-gray-400 hover:text-white'}">Tools</a>
+			<a href="/self-host" class="text-sm transition {active === 'self-host' ? 'font-medium text-brand-400' : 'text-gray-400 hover:text-white'}">Self-Host</a>
 			<a href="/about" class="text-sm transition {active === 'about' ? 'font-medium text-brand-400' : 'text-gray-400 hover:text-white'}">About</a>
 		</div>
 
@@ -71,7 +71,7 @@
 				<a href="/guides/nextjs" class="text-sm text-gray-400">Guides</a>
 				<a href="/docs" class="text-sm text-gray-400">Docs</a>
 				<a href="/blog" class="text-sm text-gray-400">Blog</a>
-				<a href="/tools/worker-generator" class="text-sm text-gray-400">Tools</a>
+				<a href="/self-host" class="text-sm text-gray-400">Self-Host</a>
 				<a href="/about" class="text-sm text-gray-400">About</a>
 				<hr class="border-white/5" />
 				{#if auth.user}

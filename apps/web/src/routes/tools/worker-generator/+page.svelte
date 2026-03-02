@@ -132,9 +132,33 @@ export default {
 </svelte:head>
 
 <div class="min-h-screen bg-[#0a0a0a] text-white">
-	<Navbar active="tools" />
+	<Navbar />
 
 	<div class="pt-[73px]">
+
+		<!-- CLI Recommendation Banner -->
+		<div class="mx-auto max-w-4xl px-6 pt-8">
+			<div class="rounded-xl border border-brand-400/20 bg-brand-400/5 p-4">
+				<div class="flex items-start gap-3">
+					<svg class="mt-0.5 h-5 w-5 shrink-0 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<polyline points="4 17 10 11 4 5" /><line x1="12" y1="19" x2="20" y2="19" />
+					</svg>
+					<div>
+						<p class="font-medium text-white">Try the new CLI tool instead</p>
+						<p class="mt-1 text-sm text-gray-400">
+							<code class="rounded bg-white/5 px-1.5 py-0.5 text-gray-300">npx create-jiobase</code> generates a full-featured proxy with WebSocket support,
+							service filtering, and auto-deployment &mdash; all in one command.
+						</p>
+						<a href="/self-host" class="mt-2 inline-flex items-center gap-1 text-sm font-medium text-brand-400 transition hover:text-brand-300">
+							Learn more
+							<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M5 12h14M12 5l7 7-7 7"/>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- ===== HERO ===== -->
 		<section class="glow-brand py-16 md:py-24">

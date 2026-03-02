@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import DonationModal from '$lib/components/DonationModal.svelte';
+	import PlatformInstaller from '$lib/components/PlatformInstaller.svelte';
 
 	let showDonation = $state(false);
 
@@ -74,10 +75,18 @@
 	<section class="glow-brand relative overflow-hidden pt-32 pb-20 md:pt-44 md:pb-32">
 		<div class="mx-auto max-w-4xl px-6 text-center">
 
-			<!-- Badge -->
-			<div class="mb-8 inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-500/5 px-4 py-1.5">
-				<span class="h-2 w-2 rounded-full bg-red-500 animate-pulse"></span>
-				<span class="text-xs font-medium text-red-400">Supabase blocked on Jio, Airtel & ACT - Fix it now</span>
+			<!-- Badges -->
+			<div class="mb-8 flex flex-wrap items-center justify-center gap-3">
+				<div class="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-500/5 px-4 py-1.5">
+					<span class="h-2 w-2 rounded-full bg-red-500 animate-pulse"></span>
+					<span class="text-xs font-medium text-red-400">Supabase blocked on Jio, Airtel & ACT</span>
+				</div>
+				<a href="/self-host" class="inline-flex items-center gap-1.5 rounded-full border border-white/10 px-3 py-1.5 text-xs text-gray-400 transition hover:border-brand-400/30 hover:text-brand-400">
+					<span class="font-mono text-brand-400">npx create-jiobase</span>
+					<span>&middot;</span>
+					<span>self-host</span>
+					<svg class="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+				</a>
 			</div>
 
 			<h1 class="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
@@ -489,6 +498,34 @@
 					Every $3 coffee directly pays for Cloudflare Workers that keep your app online.
 				</p>
 			</div>
+		</div>
+	</section>
+
+
+	<!-- ===== SELF-HOST ===== -->
+	<section class="border-t border-white/5 py-24 md:py-32">
+		<div class="mx-auto max-w-4xl px-6 text-center">
+			<p class="text-sm font-semibold uppercase tracking-wider text-brand-400">Self-host</p>
+			<h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+				Prefer to own your proxy?
+			</h2>
+			<p class="mx-auto mt-4 max-w-2xl text-gray-400">
+				Deploy your own Supabase proxy on Cloudflare Workers with one command. Free, open-source, full WebSocket support.
+			</p>
+
+			<div class="mx-auto mt-10 max-w-xl">
+				<PlatformInstaller compact={true} />
+			</div>
+
+			<a
+				href="/self-host"
+				class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-brand-400 transition hover:text-brand-300"
+			>
+				Learn more about self-hosting
+				<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<path d="M5 12h14M12 5l7 7-7 7"/>
+				</svg>
+			</a>
 		</div>
 	</section>
 

@@ -34,6 +34,51 @@
 	</div>
 
 	<div class="space-y-8">
+		<!-- NEW: CLI Announcement -->
+		<a href="/blog/create-jiobase-cli-self-host" class="group block glass-card rounded-2xl p-6 transition hover:border-white/10">
+			<div class="flex items-center gap-3 text-sm text-gray-500">
+				<span class="rounded-full border border-brand-400/20 bg-brand-400/5 px-2.5 py-0.5 text-xs font-medium text-brand-400">Tutorial</span>
+				<time>March 2, 2026</time>
+				<span>5 min read</span>
+			</div>
+			<h2 class="mt-3 text-xl font-semibold group-hover:text-brand-400 transition">
+				Introducing create-jiobase: Self-Host Your Supabase Proxy in Under 60 Seconds
+			</h2>
+			<p class="mt-2 text-sm text-gray-400 leading-relaxed">
+				A new CLI tool that scaffolds a production-quality Cloudflare Worker proxy and deploys it to your own account. One command, full WebSocket support, completely free.
+			</p>
+		</a>
+
+		<!-- NEW: Self-Host Tutorial -->
+		<a href="/blog/self-host-supabase-proxy-tutorial" class="group block glass-card rounded-2xl p-6 transition hover:border-white/10">
+			<div class="flex items-center gap-3 text-sm text-gray-500">
+				<span class="rounded-full border border-brand-400/20 bg-brand-400/5 px-2.5 py-0.5 text-xs font-medium text-brand-400">Tutorial</span>
+				<time>March 2, 2026</time>
+				<span>8 min read</span>
+			</div>
+			<h2 class="mt-3 text-xl font-semibold group-hover:text-brand-400 transition">
+				How to Self-Host a Supabase Proxy on Cloudflare Workers (Free)
+			</h2>
+			<p class="mt-2 text-sm text-gray-400 leading-relaxed">
+				Complete walkthrough: from zero to a deployed Supabase reverse proxy on your own Cloudflare account. Covers every step including testing REST, Auth, and Realtime.
+			</p>
+		</a>
+
+		<!-- NEW: Self-Host vs Managed Comparison -->
+		<a href="/blog/self-host-vs-managed-supabase-proxy" class="group block glass-card rounded-2xl p-6 transition hover:border-white/10">
+			<div class="flex items-center gap-3 text-sm text-gray-500">
+				<span class="rounded-full border border-purple-400/20 bg-purple-400/5 px-2.5 py-0.5 text-xs font-medium text-purple-400">Comparison</span>
+				<time>March 2, 2026</time>
+				<span>6 min read</span>
+			</div>
+			<h2 class="mt-3 text-xl font-semibold group-hover:text-brand-400 transition">
+				Self-Hosted vs Managed Supabase Proxy: Which Should You Choose?
+			</h2>
+			<p class="mt-2 text-sm text-gray-400 leading-relaxed">
+				Two paths to unblocking Supabase in India. One gives you full control, the other handles everything for you. Detailed comparison with decision guide.
+			</p>
+		</a>
+
 		<!-- Blog 1 -->
 		<a href="/blog/supabase-blocked-india-fix" class="group block glass-card rounded-2xl p-6 transition hover:border-white/10">
 			<div class="flex items-center gap-3 text-sm text-gray-500">
