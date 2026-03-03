@@ -4,21 +4,21 @@
 </script>
 
 <svelte:head>
-	<title>Fix Supabase on Jio in 5 Minutes | JioBase</title>
-	<meta name="description" content="Supabase not working on Jio? Fix it in 5 minutes with a one-line code change. No VPN, no DNS hacks. Works for all your users instantly." />
+	<title>Fix Supabase on Jio in 60 Seconds | JioBase</title>
+	<meta name="description" content="Supabase not working on Jio? Fix it in under 60 seconds with one command. No VPN, no DNS hacks. Works for all your users instantly." />
 	<meta name="keywords" content="fix supabase jio, supabase jio not working, supabase jio fix, supabase blocked jio, jio supabase timeout" />
-	<meta property="og:title" content="Fix Supabase on Jio in 5 Minutes" />
-	<meta property="og:description" content="Supabase not working on Jio? Fix it in 5 minutes with a one-line code change. No VPN, no DNS hacks." />
+	<meta property="og:title" content="Fix Supabase on Jio in 60 Seconds" />
+	<meta property="og:description" content="Supabase not working on Jio? Fix it in under 60 seconds with one command. No VPN, no DNS hacks." />
 	<meta property="og:type" content="article" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Fix Supabase on Jio in 5 Minutes" />
-	<meta name="twitter:description" content="Supabase not working on Jio? Fix it in 5 minutes. No VPN, no DNS hacks. Works for all your users." />
+	<meta name="twitter:title" content="Fix Supabase on Jio in 60 Seconds" />
+	<meta name="twitter:description" content="Supabase not working on Jio? Fix it in under 60 seconds. No VPN, no DNS hacks. Works for all your users." />
 	<meta property="article:published_time" content="2026-02-28" />
 	<meta property="article:tag" content="supabase" />
 	<meta property="article:tag" content="jio" />
 	<meta property="article:tag" content="fix" />
 	<link rel="canonical" href="https://jiobase.com/blog/fix-supabase-jio-5-minutes" />
-	{@html `<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Fix Supabase on Jio in 5 Minutes","description":"Supabase not working on Jio? Fix it in 5 minutes with a one-line code change. No VPN, no DNS hacks. Works for all your users instantly.","datePublished":"2026-02-28T00:00:00+05:30","dateModified":"2026-02-28T00:00:00+05:30","author":{"@type":"Person","name":"Sunith VS","url":"https://sunithvs.com"},"publisher":{"@type":"Organization","@id":"https://jiobase.com/#organization","name":"JioBase","logo":{"@type":"ImageObject","url":"https://jiobase.com/favicon-192.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://jiobase.com/blog/fix-supabase-jio-5-minutes"},"image":"https://jiobase.com/favicon-192.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jiobase.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://jiobase.com/blog"},{"@type":"ListItem","position":3,"name":"Fix Supabase on Jio in 5 Minutes"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long does the setup take?","acceptedAnswer":{"@type":"Answer","text":"Under 5 minutes. Sign up, create an app in the dashboard, change one URL in your code, and deploy."}},{"@type":"Question","name":"Does this work with Supabase Realtime / WebSockets?","acceptedAnswer":{"@type":"Answer","text":"Yes. JioBase supports WebSocket proxying for Supabase Realtime, including subscriptions, presence, and broadcast channels."}},{"@type":"Question","name":"Is JioBase free?","acceptedAnswer":{"@type":"Answer","text":"The free tier includes 1 proxy app and 50,000 requests per month. No credit card required."}},{"@type":"Question","name":"Do I need to change my Supabase anon key or RLS policies?","acceptedAnswer":{"@type":"Answer","text":"No. The proxy passes all headers and keys unchanged. Your anon key, service role key, and all Row Level Security policies work exactly the same."}}]}]})}</script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Fix Supabase on Jio in 60 Seconds","description":"Supabase not working on Jio? Fix it in under 60 seconds with one command. No VPN, no DNS hacks. Works for all your users instantly.","datePublished":"2026-02-28T00:00:00+05:30","dateModified":"2026-02-28T00:00:00+05:30","author":{"@type":"Person","name":"Sunith VS","url":"https://sunithvs.com"},"publisher":{"@type":"Organization","@id":"https://jiobase.com/#organization","name":"JioBase","logo":{"@type":"ImageObject","url":"https://jiobase.com/favicon-192.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://jiobase.com/blog/fix-supabase-jio-5-minutes"},"image":"https://jiobase.com/favicon-192.png"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jiobase.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://jiobase.com/blog"},{"@type":"ListItem","position":3,"name":"Fix Supabase on Jio in 60 Seconds"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How long does the setup take?","acceptedAnswer":{"@type":"Answer","text":"Under 60 seconds. Run npx create-jiobase to self-host your own proxy, or sign up at jiobase.com/register for the managed option. Change one URL in your code and deploy."}},{"@type":"Question","name":"Does this work with Supabase Realtime / WebSockets?","acceptedAnswer":{"@type":"Answer","text":"Yes. JioBase supports WebSocket proxying for Supabase Realtime, including subscriptions, presence, and broadcast channels."}},{"@type":"Question","name":"Is JioBase free?","acceptedAnswer":{"@type":"Answer","text":"The free tier includes 1 proxy app and 50,000 requests per month. No credit card required."}},{"@type":"Question","name":"Do I need to change my Supabase anon key or RLS policies?","acceptedAnswer":{"@type":"Answer","text":"No. The proxy passes all headers and keys unchanged. Your anon key, service role key, and all Row Level Security policies work exactly the same."}}]}]})}</script>`}
 </svelte:head>
 
 <article class="mx-auto max-w-3xl px-6 py-16 md:py-24">
@@ -33,7 +33,7 @@
 		</div>
 
 		<h1 class="mt-6 text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl">
-			Fix Supabase on Jio in 5 Minutes
+			Fix Supabase on Jio in 60 Seconds
 		</h1>
 
 		<p class="mt-4 text-lg leading-relaxed text-gray-400">
@@ -244,7 +244,7 @@ $ curl -I https://myapp.jiobase.com/rest/v1/
 					<svg class="h-4 w-4 shrink-0 text-gray-500 transition group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" /></svg>
 				</summary>
 				<div class="border-t border-white/5 px-5 py-4">
-					<p class="text-sm leading-relaxed text-gray-400">Under 5 minutes. Sign up, create an app in the dashboard, change one URL in your code, and deploy. That is the entire process.</p>
+					<p class="text-sm leading-relaxed text-gray-400">Under 60 seconds. Run <code class="text-brand-400">npx create-jiobase</code> to self-host your own proxy, or sign up at jiobase.com/register for the managed option. Change one URL in your code and deploy.</p>
 				</div>
 			</details>
 
@@ -283,11 +283,12 @@ $ curl -I https://myapp.jiobase.com/rest/v1/
 
 	<!-- ===== CTA ===== -->
 	<section class="mt-16 glass-card rounded-2xl border-t-2 border-brand-400/50 p-8 text-center">
-		<h2 class="text-2xl font-bold">Fix your Supabase app in 5 minutes</h2>
-		<p class="mt-3 text-gray-400">One URL change. No VPN. No DNS hacks. Works for all your users on every ISP.</p>
+		<h2 class="text-2xl font-bold">Fix your Supabase app in under 60 seconds</h2>
+		<p class="mt-3 text-gray-400">One command. No VPN. No DNS hacks. Works for all your users on every ISP.</p>
+		<p class="mt-3 text-sm text-gray-500"><code class="text-gray-400">npx create-jiobase</code> — deploy your own proxy on Cloudflare Workers for free</p>
 		<div class="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-			<a href="/register" class="rounded-lg bg-brand-400 px-6 py-2.5 text-sm font-semibold text-black transition hover:bg-brand-300">Start for free</a>
-			<a href="/docs" class="rounded-lg border border-white/10 px-6 py-2.5 text-sm font-medium text-gray-300 transition hover:text-white">Read the docs</a>
+			<a href="/self-host" class="rounded-lg bg-brand-400 px-6 py-2.5 text-sm font-semibold text-black transition hover:bg-brand-300">Self-host free</a>
+			<a href="/register" class="rounded-lg border border-white/10 px-6 py-2.5 text-sm font-medium text-gray-300 transition hover:text-white">Try managed</a>
 		</div>
 	</section>
 

@@ -468,32 +468,35 @@
 				<div class="mb-3 flex items-center gap-3">
 					<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-brand-400/20 bg-brand-400/5 text-sm font-bold text-brand-400">1</div>
 					<div>
-						<h3 class="text-lg font-semibold text-white">Quick fix: Worker Generator Tool</h3>
-						<p class="text-sm text-gray-500">Self-hosted, 5 minutes</p>
+						<h3 class="text-lg font-semibold text-white">Quick fix: Self-host a proxy</h3>
+						<p class="text-sm text-gray-500">Self-hosted, under 60 seconds</p>
 					</div>
 				</div>
 				<p class="mb-3 text-sm leading-relaxed text-gray-400">
-					Enter your Supabase URL and get a ready-to-deploy Cloudflare Worker script. Copy and paste it into Cloudflare's dashboard - no CLI needed.
+					Run one command to deploy a full-featured proxy on your own Cloudflare Workers account. Guided setup, auto-deploy.
 				</p>
+				<div class="mb-4 glass-card overflow-hidden rounded-xl">
+					<pre class="overflow-x-auto px-4 py-3"><code class="text-sm text-brand-400">npx create-jiobase</code></pre>
+				</div>
 				<ul class="mb-4 space-y-2 text-sm text-gray-400">
 					<li class="flex items-start gap-2">
 						<svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-						HTTP proxying for REST, Auth, and Storage
+						Full proxy: REST, Auth, Storage, Realtime (WebSocket), Edge Functions
 					</li>
 					<li class="flex items-start gap-2">
 						<svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-						CORS handling included
+						CORS handling + service filtering included
 					</li>
 					<li class="flex items-start gap-2">
 						<svg class="mt-0.5 h-4 w-4 shrink-0 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-						Free on Cloudflare Workers free tier
+						Free on Cloudflare Workers free tier (100k requests/day)
 					</li>
 				</ul>
 				<a
-					href="/tools/worker-generator"
+					href="/self-host"
 					class="inline-flex items-center gap-2 rounded-lg border border-brand-400/20 bg-brand-400/5 px-4 py-2 text-sm font-medium text-brand-400 transition hover:bg-brand-400/10"
 				>
-					Open Worker Generator
+					Learn more
 					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
 				</a>
 			</div>
@@ -619,23 +622,24 @@
 	<section class="mb-8">
 		<div class="rounded-2xl border border-brand-400/20 bg-brand-400/5 p-8 text-center sm:p-12">
 			<h2 class="text-2xl font-bold tracking-tight sm:text-3xl">
-				Fix your blocked app in 5 minutes
+				Fix your blocked app in under 60 seconds
 			</h2>
 			<p class="mx-auto mt-4 max-w-lg text-gray-400">
-				Now that you have confirmed the block, fix it. Set up JioBase and get your Supabase-powered app working for every user in India. One URL change is all it takes.
+				Now that you have confirmed the block, fix it. Deploy your own proxy and get your Supabase-powered app working for every user in India. One command is all it takes.
 			</p>
+			<p class="mx-auto mt-3 text-sm text-gray-500"><code class="text-gray-400">npx create-jiobase</code> — self-host on Cloudflare Workers for free</p>
 			<div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
 				<a
-					href="/register"
+					href="/self-host"
 					class="rounded-xl bg-brand-400 px-8 py-3.5 text-base font-semibold text-black shadow-lg shadow-brand-400/20 transition hover:bg-brand-300 hover:shadow-brand-400/30"
 				>
-					Start for free
+					Self-host free
 				</a>
 				<a
-					href="/docs"
+					href="/register"
 					class="rounded-xl border border-white/10 px-8 py-3.5 text-base font-medium text-gray-300 transition hover:border-white/20 hover:text-white"
 				>
-					Read the docs
+					Try managed
 				</a>
 			</div>
 			<p class="mt-6 text-xs text-gray-500">

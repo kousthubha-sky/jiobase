@@ -1,162 +1,35 @@
-<script lang="ts">
-	import { goto } from '$app/navigation';
-	import { api, ApiError } from '$lib/api.js';
-	import { JIOBASE_DOMAIN } from '@jiobase/shared';
-	import DonationGate from '$lib/components/DonationGate.svelte';
-
-	let name = $state('');
-	let slug = $state('');
-	let supabaseUrl = $state('');
-	let error = $state('');
-	let submitting = $state(false);
-	let slugManuallyEdited = $state(false);
-	let urlTouched = $state(false);
-	let showDonationGate = $state(false);
-
-	const supabaseUrlRegex = /^https:\/\/[a-z0-9]+\.supabase\.co$/;
-	let urlError = $derived(
-		urlTouched && supabaseUrl && !supabaseUrlRegex.test(supabaseUrl)
-			? 'Must be a valid Supabase URL (https://xxxxx.supabase.co)'
-			: ''
-	);
-
-	function generateSlug(name: string): string {
-		return name
-			.toLowerCase()
-			.replace(/[^a-z0-9]+/g, '-')
-			.replace(/^-|-$/g, '')
-			.substring(0, 63);
-	}
-
-	function handleNameInput() {
-		if (!slugManuallyEdited) {
-			slug = generateSlug(name);
-		}
-	}
-
-	function handleSlugInput() {
-		slugManuallyEdited = true;
-	}
-
-	function handleSubmit(e: Event) {
-		e.preventDefault();
-		error = '';
-		// Show donation gate before creating
-		showDonationGate = true;
-	}
-
-	async function createApp() {
-		submitting = true;
-		try {
-			const res = await api.apps.create({
-				name,
-				slug,
-				supabaseUrl,
-			});
-			localStorage.setItem('jb_just_created', '1');
-			goto(`/dashboard/apps/${res.data.id}`);
-		} catch (err) {
-			if (err instanceof ApiError) {
-				const fieldErrors = err.body?.details?.fieldErrors;
-				if (fieldErrors) {
-					const messages = Object.values(fieldErrors).flat();
-					error = messages.length ? messages.join('. ') : err.message;
-				} else {
-					error = err.message;
-				}
-			} else {
-				error = 'Something went wrong. Please try again.';
-			}
-		} finally {
-			submitting = false;
-		}
-	}
-</script>
-
-<DonationGate bind:open={showDonationGate} onproceed={createApp} />
-
-<div class="mx-auto max-w-lg">
-	<h1 class="text-2xl font-bold text-white">Create New App</h1>
-	<p class="mt-1 text-sm text-gray-400">Connect your Supabase project through JioBase's proxy.</p>
-
-	<form onsubmit={handleSubmit} class="mt-8 space-y-5">
-		{#if error}
-			<div class="rounded-lg bg-red-500/10 px-4 py-3 text-sm text-red-400">{error}</div>
-		{/if}
-
-		<div>
-			<label for="name" class="mb-1 block text-sm font-medium text-gray-300">App Name</label>
-			<input
-				id="name"
-				type="text"
-				bind:value={name}
-				oninput={handleNameInput}
-				required
-				class="w-full rounded-lg border border-white/10 bg-surface-200 px-3 py-2.5 text-white placeholder-gray-500 focus:border-brand-400 focus:ring-1 focus:ring-brand-400 focus:outline-none"
-				placeholder="My App"
-			/>
+<div class="mx-auto max-w-lg text-center">
+	<div class="glass-card rounded-2xl border border-yellow-500/20 p-8">
+		<div class="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-yellow-500/10">
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+			</svg>
 		</div>
 
-		<div>
-			<label for="slug" class="mb-1 block text-sm font-medium text-gray-300">Slug</label>
-			<input
-				id="slug"
-				type="text"
-				bind:value={slug}
-				oninput={handleSlugInput}
-				required
-				pattern={'[a-z0-9]([a-z0-9\\-]{0,61}[a-z0-9])?'}
-				class="w-full rounded-lg border border-white/10 bg-surface-200 px-3 py-2.5 text-white placeholder-gray-500 focus:border-brand-400 focus:ring-1 focus:ring-brand-400 focus:outline-none"
-				placeholder="my-app"
-			/>
-			{#if slug}
-				<p class="mt-1 text-xs text-gray-500">
-					Your proxy URL: <span class="text-brand-400">{slug}.{JIOBASE_DOMAIN}</span>
-				</p>
-			{/if}
-		</div>
-
-		<div>
-			<label for="supabaseUrl" class="mb-1 block text-sm font-medium text-gray-300">Supabase Project URL</label>
-			<input
-				id="supabaseUrl"
-				type="url"
-				bind:value={supabaseUrl}
-				onblur={() => (urlTouched = true)}
-				required
-				class="w-full rounded-lg border {urlError ? 'border-red-500/50' : 'border-white/10'} bg-surface-200 px-3 py-2.5 text-white placeholder-gray-500 focus:border-brand-400 focus:ring-1 focus:ring-brand-400 focus:outline-none"
-				placeholder="https://abcdefg.supabase.co"
-			/>
-			{#if urlError}
-				<p class="mt-1 text-xs text-red-400">{urlError}</p>
-			{:else}
-				<p class="mt-1 text-xs text-gray-500">Find this in your Supabase project settings → API</p>
-			{/if}
-		</div>
-
-		<p class="rounded-lg border border-white/5 bg-white/[0.02] px-4 py-3 text-xs leading-relaxed text-gray-500">
-			By creating an app, you confirm that your use complies with our
-			<a href="/terms" target="_blank" class="text-brand-400 hover:text-brand-300 underline transition">Terms of Service</a>
-			and
-			<a href="/terms#acceptable-use" target="_blank" class="text-brand-400 hover:text-brand-300 underline transition">Acceptable Use Policy</a>.
-			All proxied traffic is subject to our
-			<a href="/privacy" target="_blank" class="text-brand-400 hover:text-brand-300 underline transition">Privacy Policy</a>.
+		<h1 class="text-2xl font-bold text-white">Onboarding Paused</h1>
+		<p class="mt-3 leading-relaxed text-gray-400">
+			Due to security reasons and high traffic, we have temporarily stopped onboarding new apps on the managed platform.
 		</p>
 
-		<div class="flex gap-3 pt-2">
-			<button
-				type="submit"
-				disabled={submitting}
-				class="rounded-lg bg-brand-400 px-5 py-2.5 text-sm font-semibold text-black transition hover:bg-brand-300 disabled:opacity-50"
-			>
-				{submitting ? 'Creating...' : 'Create App'}
-			</button>
-			<a
-				href="/dashboard"
-				class="rounded-lg border border-white/10 px-5 py-2.5 text-sm text-gray-300 transition hover:border-white/20 hover:text-white"
-			>
-				Cancel
-			</a>
+		<div class="mt-6 rounded-xl border border-brand-400/20 bg-brand-400/5 p-5">
+			<p class="text-sm font-medium text-brand-400">Self-host your own proxy instead</p>
+			<p class="mt-2 text-sm text-gray-400">Deploy your own Supabase proxy in under 60 seconds:</p>
+			<div class="mt-3 flex items-center justify-center gap-2 rounded-lg bg-black/50 px-4 py-3 font-mono text-sm text-brand-400">
+				<span class="select-none text-gray-500">$</span>
+				<span>npx create-jiobase</span>
+			</div>
 		</div>
-	</form>
+
+		<p class="mt-6 text-sm text-gray-500">
+			For assistance and support, email
+			<a href="mailto:support@jiobase.com" class="text-brand-400 underline decoration-brand-400/30 underline-offset-4 transition hover:decoration-brand-400">support@jiobase.com</a>
+		</p>
+
+		<a
+			href="/dashboard"
+			class="mt-6 inline-block rounded-lg border border-white/10 px-5 py-2.5 text-sm text-gray-300 transition hover:border-white/20 hover:text-white"
+		>
+			Back to Dashboard
+		</a>
+	</div>
 </div>

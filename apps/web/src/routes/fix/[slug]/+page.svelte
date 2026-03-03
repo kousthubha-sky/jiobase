@@ -93,7 +93,7 @@
 			</h1>
 
 			<p class="mt-4 text-lg leading-relaxed text-gray-400">
-				Supabase is blocked on {page.name} in India. Here is exactly what is happening, how to diagnose it, and how to fix it for your users in under 5 minutes.
+				Supabase is blocked on {page.name} in India. Here is exactly what is happening, how to diagnose it, and how to fix it for your users in under 60 seconds.
 			</p>
 		</header>
 
@@ -187,46 +187,72 @@
 		<section class="mb-14">
 			<h2 class="mb-6 text-2xl font-bold tracking-tight">Fix it with JioBase</h2>
 			<p class="mb-6 leading-relaxed text-gray-300">
-				JioBase is a managed reverse proxy that routes your Supabase traffic through Cloudflare's edge network. Your {page.shortName} users connect to your JioBase proxy URL (which is not blocked), and JioBase forwards the request to Supabase. Three steps, under 5 minutes:
+				Route your Supabase traffic through an unblocked domain. Your {page.shortName} users connect to your proxy URL (which is not blocked), and the proxy forwards the request to Supabase. Two options:
 			</p>
 
-			<div class="space-y-6">
-				<div class="flex gap-4">
-					<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-400/10 text-sm font-bold text-brand-400">1</div>
-					<div>
-						<h3 class="font-semibold">Create a free JioBase account</h3>
-						<p class="mt-1 text-sm text-gray-400">Sign up at <a href="/register" class="text-brand-400 hover:underline">jiobase.com/register</a>. No credit card needed.</p>
-					</div>
+			<!-- Option A: Self-host -->
+			<div class="mb-8 glass-card rounded-xl border-t-2 border-brand-400/50 p-6">
+				<div class="flex items-center gap-3 mb-4">
+					<span class="rounded-full bg-brand-400/10 px-3 py-1 text-xs font-semibold text-brand-400">Recommended</span>
+					<h3 class="text-lg font-bold">Self-host your own proxy</h3>
 				</div>
-				<div class="flex gap-4">
-					<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-400/10 text-sm font-bold text-brand-400">2</div>
-					<div>
-						<h3 class="font-semibold">Create a proxy app</h3>
-						<p class="mt-1 text-sm text-gray-400">Enter your Supabase project URL and choose a slug. You will get a proxy URL like <code class="rounded bg-white/5 px-1.5 py-0.5 text-xs">myapp.jiobase.com</code>.</p>
+				<p class="text-sm text-gray-400 mb-4">Deploy a full-featured proxy on your own Cloudflare Workers account. Free, open-source, under 60 seconds.</p>
+				<div class="glass-card overflow-hidden rounded-xl mb-4">
+					<div class="flex items-center gap-2 border-b border-white/5 px-4 py-3">
+						<div class="h-3 w-3 rounded-full bg-red-500/50"></div>
+						<div class="h-3 w-3 rounded-full bg-yellow-500/50"></div>
+						<div class="h-3 w-3 rounded-full bg-green-500/50"></div>
+						<span class="ml-2 text-xs text-gray-500">terminal</span>
 					</div>
+					<pre class="overflow-x-auto p-4"><code class="text-sm text-gray-300">npx create-jiobase</code></pre>
 				</div>
-				<div class="flex gap-4">
-					<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-400/10 text-sm font-bold text-brand-400">3</div>
-					<div>
-						<h3 class="font-semibold">Swap your Supabase URL</h3>
-						<p class="mt-1 text-sm text-gray-400">Replace your Supabase URL with the JioBase proxy URL. One line change.</p>
-						<div class="mt-3 glass-card overflow-hidden rounded-xl">
-							<div class="flex items-center gap-2 border-b border-white/5 px-4 py-3">
-								<div class="h-3 w-3 rounded-full bg-red-500/50"></div>
-								<div class="h-3 w-3 rounded-full bg-yellow-500/50"></div>
-								<div class="h-3 w-3 rounded-full bg-green-500/50"></div>
-								<span class="ml-2 text-xs text-gray-500">supabase.ts</span>
-							</div>
-							<pre class="overflow-x-auto p-4"><code class="text-sm text-gray-300">import {'{'} createClient {'}'} from '@supabase/supabase-js'
+				<p class="text-xs text-gray-500 mb-4">Guided setup: enter your Supabase URL, configure CORS, deploy. WebSocket + all 6 services included.</p>
+				<a href="/self-host" class="inline-flex text-sm font-medium text-brand-400 hover:text-brand-300 transition">Learn more &rarr;</a>
+			</div>
 
-// Replace your Supabase URL with JioBase proxy:
-const supabase = createClient(
-  'https://myapp.jiobase.com',  // was: https://xyz.supabase.co
-  'your-anon-key'               // stays the same
-)</code></pre>
+			<!-- Option B: Managed -->
+			<div class="mb-8 glass-card rounded-xl p-6">
+				<div class="flex items-center gap-3 mb-4">
+					<h3 class="text-lg font-bold">Or use JioBase managed</h3>
+				</div>
+				<p class="text-sm text-gray-400 mb-4">If you prefer a dashboard with analytics, rate limiting, and automatic updates:</p>
+				<div class="space-y-4">
+					<div class="flex gap-4">
+						<div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-400/10 text-xs font-bold text-brand-400">1</div>
+						<div>
+							<p class="text-sm text-gray-300">Sign up at <a href="/register" class="text-brand-400 hover:underline">jiobase.com/register</a> (free, no credit card)</p>
+						</div>
+					</div>
+					<div class="flex gap-4">
+						<div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-400/10 text-xs font-bold text-brand-400">2</div>
+						<div>
+							<p class="text-sm text-gray-300">Add your Supabase project and get a proxy URL like <code class="rounded bg-white/5 px-1.5 py-0.5 text-xs">myapp.jiobase.com</code></p>
+						</div>
+					</div>
+					<div class="flex gap-4">
+						<div class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-400/10 text-xs font-bold text-brand-400">3</div>
+						<div>
+							<p class="text-sm text-gray-300">Swap your Supabase URL — one line change:</p>
 						</div>
 					</div>
 				</div>
+			</div>
+
+			<!-- Code example -->
+			<div class="glass-card overflow-hidden rounded-xl">
+				<div class="flex items-center gap-2 border-b border-white/5 px-4 py-3">
+					<div class="h-3 w-3 rounded-full bg-red-500/50"></div>
+					<div class="h-3 w-3 rounded-full bg-yellow-500/50"></div>
+					<div class="h-3 w-3 rounded-full bg-green-500/50"></div>
+					<span class="ml-2 text-xs text-gray-500">supabase.ts</span>
+				</div>
+				<pre class="overflow-x-auto p-4"><code class="text-sm text-gray-300">import {'{'} createClient {'}'} from '@supabase/supabase-js'
+
+// Replace your Supabase URL with your proxy URL:
+const supabase = createClient(
+  'https://your-proxy.workers.dev',  // was: https://xyz.supabase.co
+  'your-anon-key'                    // stays the same
+)</code></pre>
 			</div>
 		</section>
 
@@ -431,50 +457,54 @@ const supabase = createClient(
 			</p>
 		</section>
 
-		<!-- Fix it with JioBase -->
+		<!-- Fix it -->
 		<section class="mb-14">
-			<h2 class="mb-6 text-2xl font-bold tracking-tight">Fix it with JioBase</h2>
+			<h2 class="mb-6 text-2xl font-bold tracking-tight">Fix it with a reverse proxy</h2>
 			<p class="mb-6 leading-relaxed text-gray-300">
-				The permanent fix is to route your Supabase traffic through a domain that is not blocked. JioBase is a managed reverse proxy on Cloudflare's edge network. Three steps:
+				The permanent fix is to route your Supabase traffic through a domain that is not blocked. Two options:
 			</p>
 
-			<div class="space-y-6">
-				<div class="flex gap-4">
-					<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-400/10 text-sm font-bold text-brand-400">1</div>
-					<div>
-						<h3 class="font-semibold">Create a free JioBase account</h3>
-						<p class="mt-1 text-sm text-gray-400">Sign up at <a href="/register" class="text-brand-400 hover:underline">jiobase.com/register</a>. No credit card needed.</p>
-					</div>
+			<!-- Option A: Self-host -->
+			<div class="mb-8 glass-card rounded-xl border-t-2 border-brand-400/50 p-6">
+				<div class="flex items-center gap-3 mb-4">
+					<span class="rounded-full bg-brand-400/10 px-3 py-1 text-xs font-semibold text-brand-400">Recommended</span>
+					<h3 class="text-lg font-bold">Self-host your own proxy</h3>
 				</div>
-				<div class="flex gap-4">
-					<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-400/10 text-sm font-bold text-brand-400">2</div>
-					<div>
-						<h3 class="font-semibold">Create a proxy app</h3>
-						<p class="mt-1 text-sm text-gray-400">Enter your Supabase project URL and choose a slug. You will get a proxy URL like <code class="rounded bg-white/5 px-1.5 py-0.5 text-xs">myapp.jiobase.com</code>.</p>
+				<p class="text-sm text-gray-400 mb-4">Deploy a full-featured proxy on your own Cloudflare Workers account. Free, open-source, under 60 seconds.</p>
+				<div class="glass-card overflow-hidden rounded-xl mb-4">
+					<div class="flex items-center gap-2 border-b border-white/5 px-4 py-3">
+						<div class="h-3 w-3 rounded-full bg-red-500/50"></div>
+						<div class="h-3 w-3 rounded-full bg-yellow-500/50"></div>
+						<div class="h-3 w-3 rounded-full bg-green-500/50"></div>
+						<span class="ml-2 text-xs text-gray-500">terminal</span>
 					</div>
+					<pre class="overflow-x-auto p-4"><code class="text-sm text-gray-300">npx create-jiobase</code></pre>
 				</div>
-				<div class="flex gap-4">
-					<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-400/10 text-sm font-bold text-brand-400">3</div>
-					<div>
-						<h3 class="font-semibold">Swap your Supabase URL</h3>
-						<p class="mt-1 text-sm text-gray-400">Replace your Supabase URL with the JioBase proxy URL. One line change.</p>
-						<div class="mt-3 glass-card overflow-hidden rounded-xl">
-							<div class="flex items-center gap-2 border-b border-white/5 px-4 py-3">
-								<div class="h-3 w-3 rounded-full bg-red-500/50"></div>
-								<div class="h-3 w-3 rounded-full bg-yellow-500/50"></div>
-								<div class="h-3 w-3 rounded-full bg-green-500/50"></div>
-								<span class="ml-2 text-xs text-gray-500">supabase.ts</span>
-							</div>
-							<pre class="overflow-x-auto p-4"><code class="text-sm text-gray-300">import {'{'} createClient {'}'} from '@supabase/supabase-js'
+				<p class="text-xs text-gray-500 mb-4">Guided setup: enter your Supabase URL, configure CORS, deploy. WebSocket + all 6 services included.</p>
+				<a href="/self-host" class="inline-flex text-sm font-medium text-brand-400 hover:text-brand-300 transition">Learn more &rarr;</a>
+			</div>
 
-// Replace your Supabase URL with JioBase proxy:
-const supabase = createClient(
-  'https://myapp.jiobase.com',  // was: https://xyz.supabase.co
-  'your-anon-key'               // stays the same
-)</code></pre>
-						</div>
-					</div>
+			<!-- Option B: Managed -->
+			<div class="mb-8 glass-card rounded-xl p-6">
+				<h3 class="text-lg font-bold mb-4">Or use JioBase managed</h3>
+				<p class="text-sm text-gray-400 mb-4">Dashboard with analytics, rate limiting, and automatic updates. <a href="/register" class="text-brand-400 hover:underline">Sign up free</a>, add your Supabase project, and swap one URL.</p>
+			</div>
+
+			<!-- Code example -->
+			<div class="glass-card overflow-hidden rounded-xl">
+				<div class="flex items-center gap-2 border-b border-white/5 px-4 py-3">
+					<div class="h-3 w-3 rounded-full bg-red-500/50"></div>
+					<div class="h-3 w-3 rounded-full bg-yellow-500/50"></div>
+					<div class="h-3 w-3 rounded-full bg-green-500/50"></div>
+					<span class="ml-2 text-xs text-gray-500">supabase.ts</span>
 				</div>
+				<pre class="overflow-x-auto p-4"><code class="text-sm text-gray-300">import {'{'} createClient {'}'} from '@supabase/supabase-js'
+
+// Replace your Supabase URL with your proxy URL:
+const supabase = createClient(
+  'https://your-proxy.workers.dev',  // was: https://xyz.supabase.co
+  'your-anon-key'                    // stays the same
+)</code></pre>
 			</div>
 		</section>
 
@@ -626,13 +656,40 @@ const supabase = createClient(
 			</div>
 		</section>
 
-		<!-- Fix it with JioBase -->
+		<!-- Fix it -->
 		<section class="mb-14">
-			<h2 class="mb-6 text-2xl font-bold tracking-tight">Fix it with JioBase</h2>
+			<h2 class="mb-6 text-2xl font-bold tracking-tight">Fix {page.featureName}</h2>
 			<p class="mb-6 leading-relaxed text-gray-300">
-				JioBase routes {page.featureName} traffic through Cloudflare's edge network, bypassing the ISP block entirely. Your existing code stays almost identical - just swap the URL:
+				Route {page.featureName} traffic through an unblocked domain. Your existing code stays almost identical — just swap the URL. Two options:
 			</p>
 
+			<!-- Option A: Self-host -->
+			<div class="mb-8 glass-card rounded-xl border-t-2 border-brand-400/50 p-6">
+				<div class="flex items-center gap-3 mb-4">
+					<span class="rounded-full bg-brand-400/10 px-3 py-1 text-xs font-semibold text-brand-400">Recommended</span>
+					<h3 class="text-lg font-bold">Self-host your own proxy</h3>
+				</div>
+				<p class="text-sm text-gray-400 mb-4">Deploy a full-featured proxy on your own Cloudflare Workers account. Free, open-source, under 60 seconds.</p>
+				<div class="glass-card overflow-hidden rounded-xl mb-4">
+					<div class="flex items-center gap-2 border-b border-white/5 px-4 py-3">
+						<div class="h-3 w-3 rounded-full bg-red-500/50"></div>
+						<div class="h-3 w-3 rounded-full bg-yellow-500/50"></div>
+						<div class="h-3 w-3 rounded-full bg-green-500/50"></div>
+						<span class="ml-2 text-xs text-gray-500">terminal</span>
+					</div>
+					<pre class="overflow-x-auto p-4"><code class="text-sm text-gray-300">npx create-jiobase</code></pre>
+				</div>
+				<p class="text-xs text-gray-500 mb-4">Guided setup: enter your Supabase URL, configure CORS, deploy. {page.featureName} + all other services included.</p>
+				<a href="/self-host" class="inline-flex text-sm font-medium text-brand-400 hover:text-brand-300 transition">Learn more &rarr;</a>
+			</div>
+
+			<!-- Option B: Managed -->
+			<div class="mb-8 glass-card rounded-xl p-6">
+				<h3 class="text-lg font-bold mb-4">Or use JioBase managed</h3>
+				<p class="text-sm text-gray-400 mb-4">Dashboard with analytics, rate limiting, and automatic updates. <a href="/register" class="text-brand-400 hover:underline">Sign up free</a>, add your Supabase project, and swap one URL.</p>
+			</div>
+
+			<!-- Code example -->
 			<div class="glass-card overflow-hidden rounded-xl">
 				<div class="flex items-center gap-2 border-b border-white/5 px-4 py-3">
 					<div class="h-3 w-3 rounded-full bg-red-500/50"></div>
@@ -644,55 +701,12 @@ const supabase = createClient(
 			</div>
 		</section>
 
-		<!-- Step by step setup -->
+		<!-- Deploy and verify -->
 		<section class="mb-14">
-			<h2 class="mb-6 text-2xl font-bold tracking-tight">Step-by-step setup</h2>
-
-			<div class="space-y-6">
-				<div class="flex gap-4">
-					<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-400/10 text-sm font-bold text-brand-400">1</div>
-					<div>
-						<h3 class="font-semibold">Create a free JioBase account</h3>
-						<p class="mt-1 text-sm text-gray-400">Sign up at <a href="/register" class="text-brand-400 hover:underline">jiobase.com/register</a>. No credit card needed.</p>
-					</div>
-				</div>
-				<div class="flex gap-4">
-					<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-400/10 text-sm font-bold text-brand-400">2</div>
-					<div>
-						<h3 class="font-semibold">Create a proxy app</h3>
-						<p class="mt-1 text-sm text-gray-400">Enter your Supabase project URL and choose a slug. You will get a proxy URL like <code class="rounded bg-white/5 px-1.5 py-0.5 text-xs">myapp.jiobase.com</code>.</p>
-					</div>
-				</div>
-				<div class="flex gap-4">
-					<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-400/10 text-sm font-bold text-brand-400">3</div>
-					<div>
-						<h3 class="font-semibold">Swap your Supabase URL</h3>
-						<p class="mt-1 text-sm text-gray-400">Replace your Supabase URL with the JioBase proxy URL. Your anon key stays the same. {page.featureName} works identically through the proxy.</p>
-						<div class="mt-3 glass-card overflow-hidden rounded-xl">
-							<div class="flex items-center gap-2 border-b border-white/5 px-4 py-3">
-								<div class="h-3 w-3 rounded-full bg-red-500/50"></div>
-								<div class="h-3 w-3 rounded-full bg-yellow-500/50"></div>
-								<div class="h-3 w-3 rounded-full bg-green-500/50"></div>
-								<span class="ml-2 text-xs text-gray-500">supabase.ts</span>
-							</div>
-							<pre class="overflow-x-auto p-4"><code class="text-sm text-gray-300">import {'{'} createClient {'}'} from '@supabase/supabase-js'
-
-// Replace your Supabase URL with JioBase proxy:
-const supabase = createClient(
-  'https://myapp.jiobase.com',  // was: https://xyz.supabase.co
-  'your-anon-key'               // stays the same
-)</code></pre>
-						</div>
-					</div>
-				</div>
-				<div class="flex gap-4">
-					<div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-400/10 text-sm font-bold text-brand-400">4</div>
-					<div>
-						<h3 class="font-semibold">Deploy and verify</h3>
-						<p class="mt-1 text-sm text-gray-400">Deploy your updated code. Test from a blocked ISP (Jio, Airtel) to confirm {page.shortName} operations work through the proxy.</p>
-					</div>
-				</div>
-			</div>
+			<h2 class="mb-4 text-2xl font-bold tracking-tight">Deploy and verify</h2>
+			<p class="leading-relaxed text-gray-300">
+				Deploy your updated code and test from a blocked ISP (Jio, Airtel) to confirm {page.shortName} operations work through the proxy. Your anon key stays the same. {page.featureName} works identically through the proxy.
+			</p>
 		</section>
 
 		<!-- What stays the same -->

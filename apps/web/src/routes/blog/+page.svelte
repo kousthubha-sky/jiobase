@@ -177,7 +177,7 @@
 				<span>3 min read</span>
 			</div>
 			<h2 class="mt-3 text-xl font-semibold group-hover:text-brand-400 transition">
-				Fix Supabase on Jio in 5 Minutes
+				Fix Supabase on Jio in 60 Seconds
 			</h2>
 			<p class="mt-2 text-sm text-gray-400 leading-relaxed">
 				Ultra-short, action-focused guide. No theory, no backstory -- just the fix. Sign up, swap one URL, deploy. Done.

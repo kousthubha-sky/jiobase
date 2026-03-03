@@ -631,27 +631,28 @@
 	<section class="mb-8">
 		<div class="rounded-2xl border border-brand-400/20 bg-brand-400/5 p-8 text-center sm:p-12">
 			<h2 class="text-2xl font-bold tracking-tight sm:text-3xl">
-				Bypass DNS poisoning in 5 minutes
+				Bypass DNS poisoning in under 60 seconds
 			</h2>
 			<p class="mx-auto mt-4 max-w-lg text-gray-400">
-				Set up a JioBase reverse proxy and make your Supabase app work for every user in India. No DNS changes, no VPN, no client-side workarounds. Just swap one URL.
+				Deploy your own Supabase reverse proxy and make your app work for every user in India. No DNS changes, no VPN, no client-side workarounds. One command.
 			</p>
+			<p class="mx-auto mt-3 text-sm text-gray-500"><code class="text-gray-400">npx create-jiobase</code> — self-host on Cloudflare Workers for free</p>
 			<div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
 				<a
-					href="/register"
+					href="/self-host"
 					class="rounded-xl bg-brand-400 px-8 py-3.5 text-base font-semibold text-black shadow-lg shadow-brand-400/20 transition hover:bg-brand-300 hover:shadow-brand-400/30"
 				>
-					Start for free
+					Self-host free
 				</a>
 				<a
-					href="/blog/supabase-blocked-india-fix"
+					href="/register"
 					class="rounded-xl border border-white/10 px-8 py-3.5 text-base font-medium text-gray-300 transition hover:border-white/20 hover:text-white"
 				>
-					Read the fix guide
+					Try managed
 				</a>
 			</div>
 			<p class="mt-6 text-xs text-gray-500">
-				Free tier includes 1 proxy app and 50,000 requests/month. No credit card required.
+				Self-host runs on Cloudflare Workers free tier (100k requests/day). No credit card required.
 			</p>
 		</div>
 	</section>

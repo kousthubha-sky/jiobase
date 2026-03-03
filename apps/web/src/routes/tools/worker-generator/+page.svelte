@@ -177,7 +177,7 @@ export default {
 				</h1>
 
 				<p class="mx-auto mt-4 max-w-2xl text-lg text-gray-400">
-					Generate a ready-to-deploy Cloudflare Worker that proxies your Supabase traffic. Free, open-source, and takes under 5 minutes.
+					Generate a ready-to-deploy Cloudflare Worker that proxies your Supabase traffic. Free and open-source. For a full-featured proxy with WebSocket support, try <a href="/self-host" class="text-brand-400 hover:underline">npx create-jiobase</a> instead.
 				</p>
 			</div>
 		</section>
@@ -245,7 +245,7 @@ export default {
 				<div class="mb-12 text-center">
 					<p class="text-sm font-semibold uppercase tracking-wider text-brand-400">Deployment Guide</p>
 					<h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
-						Deploy in 5 minutes
+						Deploy manually
 					</h2>
 					<p class="mx-auto mt-4 max-w-2xl text-gray-400">
 						Follow these steps to deploy your Supabase proxy worker on Cloudflare.

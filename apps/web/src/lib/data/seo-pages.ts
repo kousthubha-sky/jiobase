@@ -125,7 +125,7 @@ export const ISP_PAGES: IspPageData[] = [
       },
       {
         question: 'How quickly can I fix my Jio-blocked app?',
-        answer: 'With JioBase, you can fix it in under 5 minutes. Create a free account at jiobase.com/register, set up a proxy app, and swap your Supabase URL - one line of code. Your Jio users will be able to access your app immediately.'
+        answer: 'With JioBase, you can fix it in under 60 seconds. Run npx create-jiobase to self-host a free proxy on Cloudflare Workers, or sign up at jiobase.com/register for the managed option. Swap your Supabase URL — one line of code. Your Jio users will be able to access your app immediately.'
       }
     ],
     relatedPages: [
@@ -134,7 +134,7 @@ export const ISP_PAGES: IspPageData[] = [
       { title: 'ERR_CONNECTION_TIMED_OUT', description: 'Understand the timeout error you see', href: '/fix/err-connection-timed-out', badge: 'Error', badgeColor: 'red' },
       { title: 'Full fix guide', description: 'Detailed blog post on the Supabase block', href: '/blog/supabase-blocked-india-fix', badge: 'Blog', badgeColor: 'blue' }
     ],
-    metaTitle: 'Supabase Blocked on Jio - Fix It in 5 Minutes | JioBase',
+    metaTitle: 'Supabase Blocked on Jio - Fix It in 60 Seconds | JioBase',
     metaDescription: 'Supabase is DNS-blocked on Reliance Jio (4G, 5G, JioFiber). Fix your app for 500M+ Jio users with a one-line proxy change. No VPN needed.',
     metaKeywords: 'supabase blocked jio, supabase jio fix, supabase not working jio, jiofiber supabase blocked, supabase dns block jio'
   },
@@ -173,7 +173,7 @@ export const ISP_PAGES: IspPageData[] = [
       { title: 'Test if blocked', description: 'Diagnose ISP blocks step by step', href: '/blog/test-if-backend-blocked-india', badge: 'Blog', badgeColor: 'blue' },
       { title: 'Proxy tutorial', description: 'Build your own Cloudflare Worker proxy', href: '/blog/proxy-supabase-cloudflare-workers', badge: 'Tutorial', badgeColor: 'purple' }
     ],
-    metaTitle: 'Supabase Blocked on Airtel - Fix It in 5 Minutes | JioBase',
+    metaTitle: 'Supabase Blocked on Airtel - Fix It in 60 Seconds | JioBase',
     metaDescription: 'Supabase is DNS-blocked on Bharti Airtel (mobile and broadband). Fix your app for 380M+ Airtel users with a one-line proxy change.',
     metaKeywords: 'supabase blocked airtel, supabase airtel fix, supabase not working airtel, airtel supabase dns block'
   },
@@ -277,7 +277,7 @@ export const ISP_PAGES: IspPageData[] = [
       },
       {
         question: 'Should I add a proxy even if Vi is not blocking yet?',
-        answer: 'Yes. The ministry order under Section 69A applies to all ISPs. Even if Vi has not implemented it yet, they may at any time. Adding a proxy now means zero downtime if and when the block is enforced. JioBase is free to set up and takes 5 minutes.'
+        answer: 'Yes. The ministry order under Section 69A applies to all ISPs. Even if Vi has not implemented it yet, they may at any time. Adding a proxy now means zero downtime if and when the block is enforced. JioBase is free to set up and takes under 60 seconds — just run npx create-jiobase.'
       },
       {
         question: 'My Vi users say the app works fine. Should I still worry?',
@@ -349,7 +349,7 @@ export const ERROR_PAGES: ErrorPageData[] = [
       { title: 'Full fix guide', description: 'Complete Supabase block fix', href: '/blog/supabase-blocked-india-fix', badge: 'Blog', badgeColor: 'brand' }
     ],
     metaTitle: 'Supabase ERR_CONNECTION_TIMED_OUT in India - Fix | JioBase',
-    metaDescription: 'Getting ERR_CONNECTION_TIMED_OUT with Supabase in India? Your ISP is DNS-blocking supabase.co. Here is why it happens and how to fix it in 5 minutes.',
+    metaDescription: 'Getting ERR_CONNECTION_TIMED_OUT with Supabase in India? Your ISP is DNS-blocking supabase.co. Here is why it happens and how to fix it in under 60 seconds.',
     metaKeywords: 'supabase ERR_CONNECTION_TIMED_OUT, supabase connection timed out india, supabase timeout jio, supabase not connecting india'
   },
   {
@@ -492,7 +492,7 @@ const { data, error } = await supabase.auth.signInWithPassword({
       { title: 'Full fix guide', description: 'Complete Supabase block fix', href: '/blog/supabase-blocked-india-fix', badge: 'Blog', badgeColor: 'brand' }
     ],
     metaTitle: 'Supabase Auth Not Working in India - Fix Login Issues | JioBase',
-    metaDescription: 'Supabase Auth blocked in India? Sign up, login, OAuth, and session refresh all fail due to ISP DNS blocking. Fix it in 5 minutes with a proxy.',
+    metaDescription: 'Supabase Auth blocked in India? Sign up, login, OAuth, and session refresh all fail due to ISP DNS blocking. Fix it in under 60 seconds with a proxy.',
     metaKeywords: 'supabase auth not working india, supabase login blocked india, supabase oauth india fix, supabase sign in error india'
   },
   {
