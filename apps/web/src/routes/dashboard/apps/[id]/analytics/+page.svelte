@@ -6,14 +6,14 @@
 	let loading = $state(true);
 	let error = $state('');
 	let data = $state<AnalyticsOverview | null>(null);
-	let window = $state('24h');
+	let timeWindow = $state('24h');
 	const appId = page.params.id!;
 
-	async function load() {
+	async function load(w: string) {
 		loading = true;
 		error = '';
 		try {
-			const res = await api.analytics.overview(appId, window);
+			const res = await api.analytics.overview(appId, w);
 			data = res.data;
 		} catch (err) {
 			error = err instanceof ApiError ? err.message : 'Failed to load analytics';
@@ -22,10 +22,12 @@
 		}
 	}
 
-	onMount(load);
+	onMount(() => load(timeWindow));
 
-	// Reload when window changes
-	$effect(() => { window; load(); });
+	function setWindow(w: string) {
+		timeWindow = w;
+		load(w);
+	}
 
 	function bar(pct: number) {
 		return `width: ${Math.max(pct, 2)}%`;
@@ -48,8 +50,8 @@
 	<div class="flex gap-1 rounded-lg border border-white/10 bg-surface-200 p-1">
 		{#each ['1h','24h','7d','30d'] as w}
 			<button
-				onclick={() => (window = w)}
-				class="rounded-md px-3 py-1 text-xs font-medium transition {window === w ? 'bg-brand-400 text-black' : 'text-gray-400 hover:text-white'}"
+				onclick={() => setWindow(w)}
+				class="rounded-md px-3 py-1 text-xs font-medium transition {timeWindow === w ? 'bg-brand-400 text-black' : 'text-gray-400 hover:text-white'}"
 			>{w}</button>
 		{/each}
 	</div>
@@ -77,7 +79,7 @@
 			</div>
 		{/each}
 	</div>
-	<p class="mt-2 text-center text-xs text-gray-500">{data.latency.totalRequests.toLocaleString()} requests in last {window}</p>
+	<p class="mt-2 text-center text-xs text-gray-500">{data.latency.totalRequests.toLocaleString()} requests in last {timeWindow}</p>
 
 	<!-- Endpoint breakdown -->
 	{#if data.endpoints.length > 0}

@@ -123,7 +123,9 @@
 
 	<!-- Failover status pill (only shown if failover is configured) -->
 	{#if app.enable_failover}
-		{#await api.apps.failoverStatus(app.id) then res}
+		{#await api.apps.failoverStatus(app.id)}
+			<div class="mt-4 h-9 rounded-lg bg-white/5 animate-pulse"></div>
+		{:then res}
 			<div class="mt-4 flex items-center gap-2 rounded-lg border px-4 py-2.5 text-sm
 				{res.data.isFailing
 					? 'border-amber-500/30 bg-amber-500/10 text-amber-400'
@@ -131,6 +133,8 @@
 				<span class="h-2 w-2 rounded-full {res.data.isFailing ? 'bg-amber-400' : 'bg-brand-400'}"></span>
 				{res.data.isFailing ? 'Traffic routing to backup Supabase' : 'Traffic routing to primary Supabase'}
 			</div>
+		{:catch}
+			<!-- failover status fetch failed — don't block the page -->
 		{/await}
 	{/if}
 
