@@ -473,20 +473,21 @@
 				Try JioBase free
 			</h2>
 			<p class="mx-auto mt-4 max-w-lg text-gray-400">
-				Set up a managed Supabase reverse proxy in under 5 minutes. One URL change. Full API support including Realtime WebSockets. No credit card required.
+				Deploy your own Supabase reverse proxy in under 60 seconds. One command. Full API support including Realtime WebSockets. Free and open-source.
 			</p>
+			<p class="mx-auto mt-3 text-sm text-gray-500"><code class="text-gray-400">npx create-jiobase</code> — self-host on Cloudflare Workers</p>
 			<div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
 				<a
-					href="/register"
+					href="/self-host"
 					class="rounded-xl bg-brand-400 px-8 py-3.5 text-base font-semibold text-black shadow-lg shadow-brand-400/20 transition hover:bg-brand-300 hover:shadow-brand-400/30"
 				>
-					Start for free
+					Self-host free
 				</a>
 				<a
-					href="/blog/proxy-supabase-cloudflare-workers"
+					href="/register"
 					class="flex items-center gap-2 text-sm font-medium text-gray-400 transition hover:text-white"
 				>
-					Read the technical tutorial
+					Try managed
 					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
 				</a>
 			</div>

@@ -503,7 +503,7 @@
 						</svg>
 					</summary>
 					<div class="border-t border-white/5 px-5 py-4">
-						<p class="text-sm leading-relaxed text-gray-400">Yes. JioBase provides a free <a href="/tools/worker-generator" class="text-brand-400 underline decoration-brand-400/30 underline-offset-4 transition hover:decoration-brand-400">Worker Generator Tool</a> that creates a Cloudflare Worker you can deploy yourself. The self-hosted version handles HTTP proxying but does not include WebSocket/Realtime support, analytics, rate limiting, or the management dashboard.</p>
+						<p class="text-sm leading-relaxed text-gray-400">Yes! Run <code class="rounded bg-white/5 px-1 py-0.5 text-xs text-gray-300">npx create-jiobase</code> to deploy a full-featured proxy on your own Cloudflare Workers account for free. The CLI generates a production-quality worker with WebSocket/Realtime support, CORS configuration, and service filtering — then auto-deploys it. See the <a href="/self-host" class="text-brand-400 underline decoration-brand-400/30 underline-offset-4 transition hover:decoration-brand-400">self-host page</a> for details.</p>
 					</div>
 				</details>
 			</div>

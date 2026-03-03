@@ -299,7 +299,7 @@
 		</p>
 
 		<p class="leading-relaxed text-gray-300">
-			It takes <a href="/blog/fix-supabase-jio-5-minutes" class="text-brand-400 underline decoration-brand-400/30 underline-offset-4 transition hover:decoration-brand-400">less than five minutes</a> to set up. You change one URL in your Supabase client configuration and deploy. No SDK changes, no code refactoring, no infrastructure to manage. Your app becomes resilient to ISP blocks immediately.
+			It takes <a href="/self-host" class="text-brand-400 underline decoration-brand-400/30 underline-offset-4 transition hover:decoration-brand-400">under 60 seconds</a> to set up. Run <code class="rounded bg-brand-400/10 px-1.5 py-0.5 text-sm text-brand-400">npx create-jiobase</code> and you get a deployed proxy. You change one URL in your Supabase client configuration and deploy. No SDK changes, no code refactoring, no infrastructure to manage. Your app becomes resilient to ISP blocks immediately.
 		</p>
 	</section>
 

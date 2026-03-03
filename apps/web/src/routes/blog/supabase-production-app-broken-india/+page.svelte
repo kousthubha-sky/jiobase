@@ -38,7 +38,7 @@
 		</h1>
 
 		<p class="mt-4 text-lg leading-relaxed text-gray-400">
-			Your Supabase-powered app just stopped working for Indian users. Here is the emergency triage guide. Diagnose the problem in 60 seconds, avoid the common mistakes, and get your app running again in 15 minutes.
+			Your Supabase-powered app just stopped working for Indian users. Here is the emergency triage guide. Diagnose the problem in 60 seconds, avoid the common mistakes, and get your app running again with one command.
 		</p>
 	</header>
 
@@ -172,7 +172,7 @@
 
 	<!-- ===== Section 3: Emergency fix ===== -->
 	<section class="mb-14" id="emergency-fix">
-		<h2 class="mb-4 text-2xl font-bold tracking-tight">Emergency fix: swap your Supabase URL (15 minutes)</h2>
+		<h2 class="mb-4 text-2xl font-bold tracking-tight">Emergency fix: swap your Supabase URL (under 60 seconds)</h2>
 
 		<p class="mb-8 leading-relaxed text-gray-300">
 			The fix is to route your Supabase traffic through a domain that is not blocked. Here is the fastest path to get your production app working again.
@@ -499,24 +499,25 @@
 				Every minute your app is down, you are losing users
 			</h2>
 			<p class="mx-auto mt-4 max-w-lg text-gray-400">
-				The block is not going away on its own. Set up JioBase in 15 minutes and get your Supabase-powered app working for every user in India. No VPN required. No DNS changes for your users. Just swap one URL.
+				The block is not going away on its own. Deploy your own proxy in under 60 seconds and get your Supabase-powered app working for every user in India. No VPN required. No DNS changes for your users. One command.
 			</p>
+			<p class="mx-auto mt-3 text-sm text-gray-500"><code class="text-gray-400">npx create-jiobase</code> — self-host on Cloudflare Workers for free</p>
 			<div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
 				<a
-					href="/register"
+					href="/self-host"
 					class="rounded-xl bg-brand-400 px-8 py-3.5 text-base font-semibold text-black shadow-lg shadow-brand-400/20 transition hover:bg-brand-300 hover:shadow-brand-400/30"
 				>
-					Fix my app now
+					Self-host free
 				</a>
 				<a
-					href="/tools/worker-generator"
+					href="/register"
 					class="rounded-xl border border-white/10 px-8 py-3.5 text-base font-medium text-gray-300 transition hover:border-white/20 hover:text-white"
 				>
-					Self-host a proxy instead
+					Try managed
 				</a>
 			</div>
 			<p class="mt-6 text-xs text-gray-500">
-				Free tier includes 1 proxy app and 50,000 requests/month. No credit card required.
+				Self-host runs on Cloudflare Workers free tier (100k requests/day). No credit card required.
 			</p>
 		</div>
 	</section>

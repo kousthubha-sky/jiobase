@@ -371,25 +371,23 @@
 	<!-- ===== CTA ===== -->
 	<section>
 		<div class="glass-card rounded-2xl border-t-2 border-brand-400 p-8 text-center sm:p-12">
-			<h2 class="text-2xl font-bold tracking-tight sm:text-3xl">Fix Your App in 5 Minutes</h2>
+			<h2 class="text-2xl font-bold tracking-tight sm:text-3xl">Fix Your App in Under 60 Seconds</h2>
 			<p class="mx-auto mt-4 max-w-lg text-gray-400">
-				Do not wait for ISPs to unblock Supabase. Set up a JioBase proxy now and make your app accessible to every user in India.
+				Do not wait for ISPs to unblock Supabase. Deploy your own proxy and make your app accessible to every user in India.
 			</p>
+			<p class="mx-auto mt-3 text-sm text-gray-500"><code class="text-gray-400">npx create-jiobase</code> — self-host on Cloudflare Workers for free</p>
 			<div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
 				<a
-					href="/register"
+					href="/self-host"
 					class="rounded-xl bg-brand-400 px-8 py-3.5 text-base font-semibold text-black shadow-lg shadow-brand-400/20 transition hover:bg-brand-300 hover:shadow-brand-400/30"
 				>
-					Start for free
+					Self-host free
 				</a>
 				<a
-					href="/tools/worker-generator"
-					class="flex items-center gap-2 rounded-xl border border-white/10 px-8 py-3.5 text-base font-medium text-gray-300 transition hover:border-white/20 hover:text-white"
+					href="/register"
+					class="rounded-xl border border-white/10 px-8 py-3.5 text-base font-medium text-gray-300 transition hover:border-white/20 hover:text-white"
 				>
-					<svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
-					</svg>
-					Self-host instead
+					Try managed
 				</a>
 			</div>
 		</div>

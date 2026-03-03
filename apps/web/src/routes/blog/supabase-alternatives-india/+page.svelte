@@ -465,7 +465,7 @@
 					</tr>
 					<tr class="border-b border-white/5">
 						<td class="px-4 py-3 font-medium text-gray-400">Time to fix</td>
-						<td class="px-4 py-3 text-brand-400">5 minutes</td>
+						<td class="px-4 py-3 text-brand-400">60 seconds</td>
 						<td class="px-4 py-3 text-amber-400">1-2 days</td>
 						<td class="px-4 py-3 text-red-400">2-4 weeks</td>
 						<td class="px-4 py-3 text-red-400">2-4 weeks</td>

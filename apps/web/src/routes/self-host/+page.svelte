@@ -356,7 +356,7 @@
 						<svg class="h-4 w-4 shrink-0 text-gray-500 transition group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
 					</summary>
 					<div class="px-5 pb-5 text-sm leading-relaxed text-gray-400">
-						You need Node.js 18 or higher and a free Cloudflare account. The CLI handles everything else: it installs dependencies, scaffolds the project, and deploys to Cloudflare Workers automatically. If you don't have Node.js, the shell installer (<code class="text-gray-300">curl</code> or PowerShell) will install it for you.
+						You need Node.js 18 or higher and a free Cloudflare account. The CLI handles everything else: it installs dependencies, scaffolds the project, and deploys to Cloudflare Workers automatically. You can install Node.js from <a href="https://nodejs.org" target="_blank" rel="noopener" class="text-brand-400 hover:text-brand-300">nodejs.org</a> or using your system's package manager.
 					</div>
 				</details>
 
@@ -462,7 +462,7 @@
 						<div>
 							<p class="text-xs font-medium text-gray-400 mb-1.5">Ubuntu / Debian</p>
 							<div class="rounded-lg bg-white/[0.03] border border-white/[0.06] px-3 py-2 overflow-x-auto">
-								<code class="text-xs text-brand-400 font-mono whitespace-nowrap">curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash - && sudo apt install -y nodejs</code>
+								<code class="text-xs text-brand-400 font-mono whitespace-nowrap">sudo apt update && sudo apt install -y nodejs npm</code>
 							</div>
 						</div>
 						<div>

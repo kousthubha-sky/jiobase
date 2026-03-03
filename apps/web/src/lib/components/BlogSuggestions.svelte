@@ -83,7 +83,7 @@
 		},
 		{
 			slug: 'fix-supabase-jio-5-minutes',
-			title: 'Fix Supabase on Jio in 5 Minutes',
+			title: 'Fix Supabase on Jio in 60 Seconds',
 			description: 'Ultra-short, action-focused guide. No theory, no backstory - just the fix.',
 			badge: 'Quick Fix',
 			badgeColor: 'brand',

@@ -424,7 +424,7 @@
 		</div>
 
 		<p class="mb-4 leading-relaxed text-gray-300">
-			The entire setup takes under 5 minutes. You change one URL in your Supabase client initialization. Everything else -- your anon key, RLS policies, database schema, auth rules -- stays exactly the same.
+			The entire setup takes under 60 seconds. Run <code class="rounded bg-white/5 px-1.5 py-0.5 text-sm text-brand-400">npx create-jiobase</code> to self-host your own proxy, or use the managed service. You change one URL in your Supabase client initialization. Everything else — your anon key, RLS policies, database schema, auth rules — stays exactly the same.
 		</p>
 
 		<div class="glass-card overflow-hidden rounded-xl">
@@ -508,11 +508,12 @@
 
 	<!-- ===== CTA ===== -->
 	<section class="mt-16 glass-card rounded-2xl border-t-2 border-brand-400/50 p-8 text-center">
-		<h2 class="text-2xl font-bold">Fix your Supabase app in 5 minutes</h2>
-		<p class="mt-3 text-gray-400">Do not wait for the block to be lifted. Route through JioBase and get your app working for every Indian user today.</p>
+		<h2 class="text-2xl font-bold">Fix your Supabase app in under 60 seconds</h2>
+		<p class="mt-3 text-gray-400">Do not wait for the block to be lifted. Deploy your own proxy and get your app working for every Indian user today.</p>
+		<p class="mt-3 text-sm text-gray-500"><code class="text-gray-400">npx create-jiobase</code> — deploy your own proxy on Cloudflare Workers for free</p>
 		<div class="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-			<a href="/register" class="rounded-lg bg-brand-400 px-6 py-2.5 text-sm font-semibold text-black transition hover:bg-brand-300">Start for free</a>
-			<a href="/docs" class="rounded-lg border border-white/10 px-6 py-2.5 text-sm font-medium text-gray-300 transition hover:text-white">Read the docs</a>
+			<a href="/self-host" class="rounded-lg bg-brand-400 px-6 py-2.5 text-sm font-semibold text-black transition hover:bg-brand-300">Self-host free</a>
+			<a href="/register" class="rounded-lg border border-white/10 px-6 py-2.5 text-sm font-medium text-gray-300 transition hover:text-white">Try managed</a>
 		</div>
 	</section>
 

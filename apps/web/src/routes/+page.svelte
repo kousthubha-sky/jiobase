@@ -371,7 +371,7 @@
 			<div class="text-center">
 				<p class="text-sm font-semibold uppercase tracking-wider text-brand-400">How it works</p>
 				<h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
-					Three steps. Five minutes.
+					Three steps. Under 60 seconds.
 				</h2>
 			</div>
 
@@ -624,14 +624,20 @@
 				<span class="text-gradient">Start building.</span>
 			</h2>
 			<p class="mx-auto mt-6 max-w-xl text-lg text-gray-400">
-				Set up your proxy in under 5 minutes. No credit card required.
+				Set up your proxy in under 60 seconds. No credit card required.
 			</p>
 			<div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
 				<a
-					href="/register"
+					href="/self-host"
 					class="rounded-xl bg-brand-400 px-8 py-3.5 text-base font-semibold text-black shadow-lg shadow-brand-400/20 transition hover:bg-brand-300 hover:shadow-brand-400/30"
 				>
-					Get started free
+					Self-host free
+				</a>
+				<a
+					href="/register"
+					class="rounded-xl border border-white/10 px-8 py-3.5 text-base font-medium text-gray-300 transition hover:border-white/20 hover:text-white"
+				>
+					Try managed
 				</a>
 			</div>
 		</div>

@@ -735,11 +735,12 @@
 	<!-- ===== CTA ===== -->
 	<section class="mt-16">
 		<div class="glass-card rounded-2xl border border-brand-400/20 p-8 text-center">
-			<h2 class="text-2xl font-bold">Fix your Supabase connectivity in 5 minutes</h2>
+			<h2 class="text-2xl font-bold">Fix your Supabase connectivity in under 60 seconds</h2>
 			<p class="mt-3 text-gray-400">Stop debugging network errors that are not your fault. Route through an unblocked domain and get your app working for every user in India.</p>
+			<p class="mt-3 text-sm text-gray-500"><code class="text-gray-400">npx create-jiobase</code> — deploy your own proxy on Cloudflare Workers for free</p>
 			<div class="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-				<a href="/register" class="rounded-lg bg-brand-400 px-6 py-2.5 text-sm font-semibold text-black transition hover:bg-brand-300">Start for free</a>
-				<a href="/docs" class="rounded-lg border border-white/10 px-6 py-2.5 text-sm font-medium text-gray-300 transition hover:text-white">Read the docs</a>
+				<a href="/self-host" class="rounded-lg bg-brand-400 px-6 py-2.5 text-sm font-semibold text-black transition hover:bg-brand-300">Self-host free</a>
+				<a href="/register" class="rounded-lg border border-white/10 px-6 py-2.5 text-sm font-medium text-gray-300 transition hover:text-white">Try managed</a>
 			</div>
 		</div>
 	</section>

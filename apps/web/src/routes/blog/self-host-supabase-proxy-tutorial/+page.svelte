@@ -55,7 +55,7 @@
 		<ul class="mb-4 space-y-3">
 			<li class="flex items-start gap-3 text-gray-300">
 				<svg class="mt-1 h-4 w-4 shrink-0 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-				<span><strong class="text-white">Node.js 18 or higher</strong> &mdash; check with <code class="rounded bg-white/5 px-1.5 py-0.5 text-sm text-gray-300">node -v</code>. If you don't have it, the shell installer handles this automatically.</span>
+				<span><strong class="text-white">Node.js 18 or higher</strong> &mdash; check with <code class="rounded bg-white/5 px-1.5 py-0.5 text-sm text-gray-300">node -v</code>. Install from <a href="https://nodejs.org" target="_blank" rel="noopener" class="text-brand-400 underline decoration-brand-400/30 underline-offset-4">nodejs.org</a> if needed.</span>
 			</li>
 			<li class="flex items-start gap-3 text-gray-300">
 				<svg class="mt-1 h-4 w-4 shrink-0 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>

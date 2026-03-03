@@ -40,7 +40,7 @@
 		<div class="mb-12">
 			<p class="text-sm font-semibold uppercase tracking-wider text-brand-400">Documentation</p>
 			<h1 class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Getting Started with JioBase</h1>
-			<p class="mt-3 text-gray-400">Set up a Supabase reverse proxy in under 5 minutes. No infrastructure changes needed.</p>
+			<p class="mt-3 text-gray-400">Set up a Supabase reverse proxy in under 60 seconds. No infrastructure changes needed.</p>
 		</div>
 
 		<!-- Table of Contents -->
@@ -116,7 +116,7 @@
 					</li>
 					<li class="flex items-start gap-2">
 						<svg class="mt-1 h-4 w-4 shrink-0 text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-						5 minutes of your time
+						60 seconds of your time
 					</li>
 				</ul>
 			</section>
