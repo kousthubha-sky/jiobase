@@ -1,38 +1,5 @@
-<script lang="ts">
-	import { goto } from '$app/navigation';
-	import { getAuth } from '$lib/stores/auth.svelte.js';
-	import { ApiError } from '$lib/api.js';
-
-	const auth = getAuth();
-
-	let name = $state('');
-	let email = $state('');
-	let password = $state('');
-	let agreedToTerms = $state(false);
-	let error = $state('');
-	let submitting = $state(false);
-
-	async function handleSubmit(e: Event) {
-		e.preventDefault();
-		error = '';
-		submitting = true;
-		try {
-			await auth.register(email, password, name || undefined);
-			goto('/dashboard');
-		} catch (err) {
-			if (err instanceof ApiError) {
-				error = err.message;
-			} else {
-				error = 'Something went wrong. Please try again.';
-			}
-		} finally {
-			submitting = false;
-		}
-	}
-</script>
-
 <svelte:head>
-	<title>Create account - JioBase</title>
+	<title>Registration Paused - JioBase</title>
 </svelte:head>
 
 <div class="flex min-h-screen items-center justify-center bg-[#0a0a0a] px-4">
@@ -47,78 +14,35 @@
 				</div>
 				<span class="text-xl font-bold text-white">JioBase</span>
 			</a>
-			<p class="mt-3 text-sm text-gray-400">Create your account - it's free</p>
 		</div>
 
-		<div class="glass-card rounded-2xl p-6">
-			<form onsubmit={handleSubmit} class="space-y-4">
-				{#if error}
-					<div class="rounded-lg bg-red-500/10 border border-red-500/20 px-4 py-3 text-sm text-red-400">
-						{error}
-					</div>
-				{/if}
-
-				<div>
-					<label for="name" class="mb-1.5 block text-sm font-medium text-gray-300">Name</label>
-					<input
-						id="name"
-						type="text"
-						bind:value={name}
-						class="w-full rounded-lg border border-white/10 bg-white/5 px-3.5 py-2.5 text-white placeholder-gray-500 focus:border-brand-400/50 focus:ring-1 focus:ring-brand-400/50 focus:outline-none transition"
-						placeholder="Your name"
-					/>
+		<div class="glass-card rounded-2xl border border-yellow-500/20 p-6">
+			<div class="text-center">
+				<div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-yellow-500/10">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+					</svg>
 				</div>
 
-				<div>
-					<label for="email" class="mb-1.5 block text-sm font-medium text-gray-300">Email</label>
-					<input
-						id="email"
-						type="email"
-						bind:value={email}
-						required
-						class="w-full rounded-lg border border-white/10 bg-white/5 px-3.5 py-2.5 text-white placeholder-gray-500 focus:border-brand-400/50 focus:ring-1 focus:ring-brand-400/50 focus:outline-none transition"
-						placeholder="you@example.com"
-					/>
-				</div>
+				<h1 class="text-xl font-bold text-white">Registration Paused</h1>
+				<p class="mt-3 text-sm leading-relaxed text-gray-400">
+					Due to security reasons and high traffic, we have temporarily stopped onboarding new users on the managed platform.
+				</p>
+			</div>
 
-				<div>
-					<label for="password" class="mb-1.5 block text-sm font-medium text-gray-300">Password</label>
-					<input
-						id="password"
-						type="password"
-						bind:value={password}
-						required
-						minlength="8"
-						class="w-full rounded-lg border border-white/10 bg-white/5 px-3.5 py-2.5 text-white placeholder-gray-500 focus:border-brand-400/50 focus:ring-1 focus:ring-brand-400/50 focus:outline-none transition"
-						placeholder="••••••••"
-					/>
-					<p class="mt-1.5 text-xs text-gray-500">Must be at least 8 characters</p>
+			<div class="mt-5 rounded-xl border border-brand-400/20 bg-brand-400/5 p-4">
+				<p class="text-sm font-medium text-brand-400">Self-host your own proxy instead</p>
+				<p class="mt-1.5 text-xs text-gray-400">Deploy in under 60 seconds:</p>
+				<div class="mt-2 flex items-center justify-center gap-2 rounded-lg bg-black/50 px-4 py-2.5 font-mono text-sm text-brand-400">
+					<span class="select-none text-gray-500">$</span>
+					<span>npx create-jiobase</span>
 				</div>
+			</div>
 
-				<div class="flex items-start gap-3">
-					<input
-						id="terms"
-						type="checkbox"
-						bind:checked={agreedToTerms}
-						class="mt-0.5 h-4 w-4 rounded border-white/20 bg-white/5 text-brand-400 focus:ring-brand-400/50 focus:ring-offset-0"
-					/>
-					<label for="terms" class="text-xs leading-relaxed text-gray-400">
-						I have read and agree to the
-						<a href="/terms" target="_blank" class="text-brand-400 hover:text-brand-300 underline transition">Terms of Service</a>
-						and
-						<a href="/privacy" target="_blank" class="text-brand-400 hover:text-brand-300 underline transition">Privacy Policy</a>.
-						I understand that API traffic will be proxied through JioBase infrastructure.
-					</label>
-				</div>
-
-				<button
-					type="submit"
-					disabled={submitting || !agreedToTerms}
-					class="w-full rounded-lg bg-brand-400 px-4 py-2.5 text-sm font-semibold text-black transition hover:bg-brand-300 focus:ring-2 focus:ring-brand-400/50 focus:ring-offset-2 focus:ring-offset-[#0a0a0a] focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
-				>
-					{submitting ? 'Creating account...' : 'Create account'}
-				</button>
-			</form>
+			<p class="mt-5 text-center text-xs text-gray-500">
+				For assistance and support, email
+				<a href="mailto:support@jiobase.com" class="text-brand-400 underline decoration-brand-400/30 underline-offset-4 transition hover:decoration-brand-400">support@jiobase.com</a>
+			</p>
 		</div>
 
 		<p class="mt-6 text-center text-sm text-gray-400">

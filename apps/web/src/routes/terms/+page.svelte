@@ -20,7 +20,7 @@
 			<h1 class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Terms of Service</h1>
 			<div class="mt-3 flex flex-col gap-1 text-sm text-gray-500">
 				<p><strong class="text-gray-400">Effective Date:</strong> March 1, 2026</p>
-				<p><strong class="text-gray-400">Last Updated:</strong> March 1, 2026</p>
+				<p><strong class="text-gray-400">Last Updated:</strong> March 3, 2026</p>
 			</div>
 		</div>
 
@@ -659,7 +659,7 @@
 						</div>
 						<div class="flex items-start gap-3">
 							<strong class="text-gray-300 shrink-0 w-36">Email:</strong>
-							<a href="mailto:jiobase@sunithvs.com" class="text-brand-400 underline decoration-brand-400/30 underline-offset-4 transition hover:decoration-brand-400">jiobase@sunithvs.com</a>
+							<a href="mailto:support@jiobase.com" class="text-brand-400 underline decoration-brand-400/30 underline-offset-4 transition hover:decoration-brand-400">support@jiobase.com</a>
 						</div>
 						<div class="flex items-start gap-3">
 							<strong class="text-gray-300 shrink-0 w-36">Website:</strong>
@@ -684,7 +684,7 @@
 						</div>
 						<div class="flex items-start gap-3">
 							<strong class="text-gray-300 shrink-0 w-36">Email:</strong>
-							<a href="mailto:jiobase@sunithvs.com" class="text-brand-400 underline decoration-brand-400/30 underline-offset-4 transition hover:decoration-brand-400">jiobase@sunithvs.com</a>
+							<a href="mailto:support@jiobase.com" class="text-brand-400 underline decoration-brand-400/30 underline-offset-4 transition hover:decoration-brand-400">support@jiobase.com</a>
 						</div>
 						<div class="flex items-start gap-3">
 							<strong class="text-gray-300 shrink-0 w-36">Response time:</strong>
